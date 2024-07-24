@@ -20,7 +20,6 @@ model Account {
   scope             String?
   id_token          String? @db.Text
   session_state     String?
-
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
@@ -43,6 +42,8 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  links         Link[]
+
 }
 
 model VerificationToken {
@@ -51,4 +52,14 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+model Link {
+  id          String   @id @default(cuid())
+  type        String
+  url         String
+  email       String
+  dateCreated DateTime @default(now())
+  lastUpdated DateTime @updatedAt
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }

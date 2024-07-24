@@ -3,7 +3,7 @@ import LoginForm from '@/components/auth/ui/login-form';
 
 export default function page() {
   return (
-    <div className='bg-gradient-to-t from-blue-700 via-violet-500 to-violet-500 h-screen w-screen flex justify-center items-center'>
+    <div className='bg-[#FAFAFA]  h-screen w-screen flex mt-20  md:mt-0 justify-center  md:items-center'>
       <div>
         <LoginForm />
       </div>

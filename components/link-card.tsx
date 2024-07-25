@@ -3,8 +3,8 @@ import { Draggable, DraggableProvided } from 'react-beautiful-dnd';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Facebook, Github, Linkedin, Twitter, Youtube, LucideIcon } from 'lucide-react';
-import {LinkTypeInfo,LinkCardProps,} from '../types'
+import { Facebook, Github, Linkedin, Twitter, Youtube } from 'lucide-react';
+import {LinkTypeInfo,LinkCardProps,LinkType} from '@/types'
 
 const linkTypes: LinkTypeInfo[] = [
   { value: 'github', label: 'GitHub', icon: Github },

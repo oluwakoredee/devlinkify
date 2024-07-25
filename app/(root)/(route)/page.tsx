@@ -36,8 +36,8 @@ export default async function Page() {
         </div>
       </nav>
       <div className='flex md:justify-center xl:justify-normal'>
-        <div className='hidden bg-white mr-6 mt-6 xl:flex w-[50%]'>
-          <Image src={'/preview-section.png'} alt="" className='flex xl:mt-[-80px] p-48' width={800} height={500} />
+        <div className='hidden bg-white mr-6 mt-6 relative xl:flex w-[50%]'>
+          <Image src={'/preview-section.png'} alt="" className='flex absolute h- xl:mt-[-80px] p-40' width={800} height={500} />
         </div>
         <div className='mt-10 px-10 bg-white md:w-full xl:w-[60%] mx-3'>
           <div className='justify-center flex bg-[#FAFAFA] p-2 rounded-lg flex-col gap-5'>
@@ -45,12 +45,7 @@ export default async function Page() {
             <p className='text-[rgba(115,115,115,1)] text-[16px] pr-18 md:p-0'>Add/edit/remove links below and then share all your profiles with the world!</p>
           </div>
           <div className='mt-12 flex flex-col gap-6'>
-            <p className='border-2 h-12 flex justify-center items-center border-[rgba(99,60,255,1)] bg-[#EFEBFF] rounded-lg'>+ Add new link</p>
-            <div className='flex flex-col bg-[#FAFAFA] rounded-lg pb-4 justify-center text-center gap-6'>
-              <Image src={'/Group 273.png'} alt="" className='flex p-[16px] mx-auto w-1/2' width={600} height={500} />
-              <h1 className='font-bold text-[24px] md:text-[32px]'>Let’s get you started</h1>
-              <LinkManager />
-            </div>
+          <LinkManager />
           </div>
         </div>
       </div>

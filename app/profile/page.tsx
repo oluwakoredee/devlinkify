@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState, ChangeEvent } from 'react';
+import { toast } from 'sonner';
 
 
 export default function page(){
@@ -40,17 +42,25 @@ export default function page(){
         </nav>
         <div className='flex md:justify-center  xl:justify-normal'> 
           <div className='hidden bg-white mr-6  mt-6  xl:flex w-[40%]'>
-          <Image src={'/Subtract(1).png'} alt="" className='flex xl:mt-[-80px] p-48 ' width={800} height={500} />
+          <Image src={'/Subtract(1).png'} alt=""  className='flex xl:mt-[-80px] p-40  ' width={800} height={500} />
           </div>
-          <div>
-            <div className='flex flex-col gap-5'>
-                <h1>Profile Details</h1>
+          <div className='flex  px-6 mt-5 pt-5 bg-white justify-center md:justify-normal gap-10 md: flex-col'>
+            <div className='flex text-[rgba(115,115,115,1)] flex-col gap-3'>
+                <h1 className='text-[rgba(51,51,51,1)] text-[24px] font-bold'>Profile Details</h1>
                 <p>Add your details to create a personal touch to your profile.</p>
             </div>
-            <div className='flex justify-between gap-7 '>
-                <p>Profile picture</p>
-                <Image src={'/Vector(4).png'} alt="" className='flex md:hidden p-[16px] ' width={60} height={50}/>
-                <p>Image must be below 1024x1024px. Use PNG or JPG format.</p>
+            <div className='flex pr-32 bg-[rgba(250,250,250,1)] mr-[0px] md:gap-[92px] md:flex-row md:justify-between md:pr-5  pl-6 md:pl-20  text-[rgba(115,115,115,1)]   w-full justify-between gap-4 py-4 rounded-lg flex-col '>
+                <p className='md:flex md:items-center  w-32'>Profile picture</p>
+                <div className='gap-40 md:gap-10 md:flex '>
+                <div className='bg-[rgba(239,235,255,1)] md:w-[200px] flex flex-col justify-center md:mr-0  mr-[50px] rounded-lg items-center h-[200px] '>
+                <Image src={'/ph_image.png'} alt="" className='flex w-auto h-auto  p-[5px] ' width={60} height={50}/>
+                <p className='font-bold text-[rgba(99,60,255,1)]'>+ Upload Image</p>
+                </div>
+                <p className='text-[12px] md:flex md:items-center mt-8 md:mt-0  md:w-[30%] md:mr-6'>Image must be below 1024x1024px. Use PNG or JPG format.</p>
+                </div>
+            </div>
+            <div>
+
             </div>
           </div>
         </div>

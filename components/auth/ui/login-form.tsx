@@ -7,7 +7,6 @@ import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { useState } from 'react';
 import { toast } from 'sonner';
-import image1 from '/Users/alobakehinde/Desktop/HNG/devlinkify/public/Vector(1).png'
 import Image from 'next/image';
 
 import { Button } from '@/components/ui/button';
@@ -55,7 +54,7 @@ export default function LoginForm() {
   return (
     <div className='md:border-1 px-12  gap-7 text-[rgba(115,115,115,1)]  md:w-full flex flex-col md:p-4'>
       <div className='flex gap-2 mb-6  md:justify-center md:mb-0'>
-      <Image src={image1} alt="" className='h-[40px] w-[40px]' />
+      <Image src={'/Vector(1).png'} alt="" className='h-[40px] w-[40px]' />
         <h1 className='md:text-center md:mb-9  text-[26.25px]  font-bold text-[rgba(51,51,51,1)]'>devlinks</h1>
       </div>
       <div className='md:bg-white md:border-gray-400 md:w-[476px] md:pl-5 md:px-10   gap-8 md:py-6 md:rounded-md'>

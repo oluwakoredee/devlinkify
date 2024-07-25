@@ -6,7 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { useState } from 'react';
-import image1 from '/Users/alobakehinde/Desktop/HNG/devlinkify/public/Vector(1).png'
+
 import Image from 'next/image';
 
 import { Button } from '@/components/ui/button';
@@ -64,7 +64,7 @@ export default function RegisterForm() {
   return (
     <div className='min-w-96 py-10 md:py-0 md:border-1 gap-4 rounded-xl md:w-full  text-[rgba(115,115,115,1)]    flex flex-col p-3'>
       <div className='flex gap-2  items-center mb-6 md:justify-center '>
-      <Image src={image1} alt="" className='h-[30px] w-[30px] flex ' />
+      <Image src={'/Vector(1).png'} alt="" className='h-[30px] w-[30px] flex ' />
       <h1 className='md:text-center   text-[26.25px]  font-bold text-[rgba(51,51,51,1)]'>devlinks</h1>
       </div>
       <div className='md:border-1 md:bg-[white]  flex flex-col md:w-[476px]  gap-8 md:py-6 rounded-xl md:items-center'>
